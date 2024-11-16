@@ -1,0 +1,97 @@
+
+body {
+    color: #333333; 
+    background-color: #f4f4f4; 
+    font-family: Arial, sans-serif; 
+}
+
+
+h1 {
+    font-family: 'Times New Roman', serif; 
+}
+.centered-section {
+    background-color: #b3d9ff; 
+    text-align: center; 
+    padding: 0.625em ; 
+    margin: 0; 
+    border-radius: 0; 
+}
+
+ul.navbar {
+    display: flex;
+    justify-content: space-around; 
+    background-color: #333333; 
+    padding: 0.1875em 0;
+    list-style-type: none; 
+    margin: 0;
+
+}
+
+ul.navbar li {
+    color: white; 
+    padding: 0.625em;
+    text-align: center;
+    position: relative;
+}
+
+ul.navbar li:hover {
+    background-color: #575757; 
+}
+li.dropdown {
+    position: relative;
+}
+
+select.dropdown-menu {
+   position: absolute; 
+    top: 100%; 
+    left: 0;
+    background-color: white; 
+    color: #333; 
+    padding: 0.3125em;
+    border: 0.0625em solid #ccc; 
+    display: none; 
+    appearance: none; 
+    -webkit-appearance: none; 
+    -moz-appearance: none; 
+    width: 10em; 
+    border-radius: 0.25em; 
+}
+
+select.dropdown-menu::after {
+    content: '▼'; 
+    position: absolute;
+    right: o.625em;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none; 
+}
+li.dropdown:hover .dropdown-menu {
+    display: block; 
+}
+
+.highlight{
+    background-color: #ffeb99;  
+    margin: 0; 
+    padding: 0.625em; 
+}
+@media all {
+    body {
+        background-color: #e0e0e0; 
+    }
+}
+
+
+@media print {
+    body {
+        color: #000; 
+        background-color: #fff; 
+    }
+
+    ul.navbar {
+        display: none; 
+    }
+
+    select {
+        display: none; 
+    }
+}
